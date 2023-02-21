@@ -4,8 +4,10 @@ import java.util.Scanner;
 
 
 public class Main{
-    XOGM mygame;
-
+    public static void main(String[] args) {
+        XOGM mygame = new XOGM();
+        mygame.runGame();
+    }
     
 }
 
@@ -43,13 +45,11 @@ class XOB extends Board{
 
     void displayBoard() {
         for (int i = 0; i < SIZE; i++) {
-            System.out.println("| ");
+            System.out.print("\n| ");
             for (int j = 0; j < SIZE; j++) {
-                
-                System.out.print( '(' + i + "," + j + ')');
                 System.out.print(  board [i][j] + " |");
             }
-            System.out.println("-----------------------------");
+            System.out.print("\n-----------------------------\n");
         }  
         
     }
@@ -105,13 +105,12 @@ class XOGM extends Manger{
         }
       
      */
-    public XOGM(){
-        runGame();  
-    }
+    
 
     void runGame() {
         char[] sy = {'X', 'O'};
         board = new XOB(3);
+        player = new Player[2];
         for (int i = 0; i < 2; i++) {
             System.out.println("Please enter your name: ");
             name = sc.next();
