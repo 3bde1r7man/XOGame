@@ -18,10 +18,15 @@ class XOGM extends Manger{
         while (true){
             for (int i=0 ;i<2; i++) {
                 board.displayBoard();
-                player[i].getMove(x, y);
-                while (!board.update (x, y, player[i].getSymbol())){
-                    player[i].getMove(x, y);
-                }
+                System.out.println(player[i].getName() + " Turn:");
+                int x = 9; // initialize invalid x
+                int y = 9; // initialize invalid y
+                while (!board.update(x, y, player[i].getSymbol())) {
+                    player[i].getMove();
+                    x = player[i].getX();
+                    y = player[i].getY();
+                };
+
                 board.displayBoard();
                 if (board.isWinner(player[i].getSymbol())){
                     System.out.println(player[i].getName() + "  " + player[i].getSymbol() + " wins\n");
