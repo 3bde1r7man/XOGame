@@ -1,4 +1,4 @@
-abstract class Manger {
+public abstract class Manger {
     String name;
     Board board;
     Player[] player;

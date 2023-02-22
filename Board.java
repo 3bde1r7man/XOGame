@@ -1,4 +1,4 @@
-abstract class Board {
+public abstract class Board {
     
     int SIZE, n_moves;
     char[][] board;

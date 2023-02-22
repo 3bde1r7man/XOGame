@@ -1,4 +1,4 @@
-class XOB extends Board {
+public class XOB extends Board {
 
 
     XOB() {

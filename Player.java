@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class Player {
+public class Player {
     Scanner sc = new Scanner(System.in);
     String name;
     char symbol;

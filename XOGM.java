@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class XOGM extends Manger{
+public class XOGM extends Manger{
     Scanner sc = new Scanner(System.in);
 
     
