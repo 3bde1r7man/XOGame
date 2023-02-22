@@ -33,7 +33,7 @@ class XOB extends Board {
             if (board[i][0] == board[i][1] && board[i][1] == board[i][2] && board[i][0] == s) {
                 return true;
             }
-            else if (board[0][i] == board[1][i] && board[1][i] == board[2][i] && board[i][0] == s) {
+            else if (board[0][i] == board[1][i] && board[1][i] == board[2][i] && board[0][i] == s) {
                 return true;
             }
         }
